@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# Data, logs, and machine learning artifacts
+data/
+datasets/
+artifacts/
+outputs/
+logs/
+runs/
+wandb/
+checkpoints/
+*.log
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pkl
+*.pickle
+
+# Private local planning
+00_notes/codex_handoff.md
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
