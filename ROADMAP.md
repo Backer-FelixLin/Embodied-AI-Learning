@@ -2,9 +2,13 @@
 
 This roadmap is a public overview of the learning path. Detailed notes and task lists live in `00_notes/`.
 
+The [Phase 0 execution plan](00_notes/phase_0_plan.md) provides current materials, tasks, and completion criteria. Later phases below are high-level plans.
+
 ## Phase 0: PyTorch and Deep Learning Basics
 
 Status: in progress
+
+Progress as of 2026-10-18: Tensor, Dataset/DataLoader, minimum math, and Autograd learning exercises are documented. Next: linear regression.
 
 Focus:
 
@@ -21,11 +25,20 @@ Artifacts:
 - autograd experiment
 - linear regression from scratch
 - small MLP classifier
+- saved model, reload in a new session, and inference evidence
+
+Remaining major steps:
+
+1. Linear regression with manual parameters, MSE, and SGD; model/loss/optimizer concepts learned in context.
+2. MLP classification with training and validation/test evaluation.
+3. Save/load/inference, continuing the classifier.
+4. Final gate and experiment-record review.
 
 Pass gate:
 
 - write `zero_grad -> forward -> loss -> backward -> step` without copying a tutorial
 - explain training, validation, and inference clearly
+- demonstrate working results and retain a short controlled-experiment report
 
 ## Phase 1: Visual Representation and Attention
 

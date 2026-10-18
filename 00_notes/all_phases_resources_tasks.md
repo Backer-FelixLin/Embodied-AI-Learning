@@ -2,27 +2,43 @@
 
 ## 总原则
 
+- 本文件汇总各阶段的资料与任务；公开路线总览见 [ROADMAP.md](../ROADMAP.md)。后续阶段仍是规划，Phase 0 的具体执行安排见 [phase_0_plan.md](phase_0_plan.md)。
 - 不按“看完多少课”算进度，按“写出代码、跑出实验、记录结果”算进度。
 - 每个阶段都要留下可运行代码或实验报告。
 - 核心算法尽量先自己写第一版，Codex 负责拆任务、review、debug 和搭实验框架。
 
 ## Phase 0: PyTorch 与 Deep Learning 基础
 
-PyTorch 入门前置：
+Phase 0 执行细节、最新进度与完整链接见 [phase_0_plan.md](phase_0_plan.md)，避免在多处维护相互冲突的独立任务单。
+
+截至 2026-10-18：Tensor、Dataset/DataLoader、必要数学与 Autograd 的教学/实践检查已完成；Tensor 包含用户完成报告，Autograd 依据代码和保存输出审阅，非独立重跑。Phase 0 尚未结束。
+
+剩余四个大步骤：
+
+1. 线性回归：手动参数、MSE、SGD、训练循环、真实参数对照和单变量实验。
+2. MLP 分类：分类基础、模型定义、训练与验证/测试评估。
+3. 保存、加载与推理：延续分类项目，保存 `state_dict`、新会话加载并验证预测。
+4. 最终验收：独立写并解释训练循环，核对运行证据与简短实验记录。
+
+模型搭建、loss、optimizer 融入项目，不另设必须先学完的完整前置课程。下一步先讨论线性回归的小步骤，确认后再学习。
+
+PyTorch 主教材（贯穿项目，不是独立前置）：
 
 - PyTorch 官方 Learn the Basics / 中文“学习基础知识”
 - 必看：Quickstart、Tensors、Datasets and DataLoaders、Build the Neural Network、Automatic Differentiation、Optimization、Save and Load
 - Transforms 第一轮快速浏览即可
-- PyTorch 官方 YouTube Series 可作为英文术语对照
-- 必看：Introduction to PyTorch、PyTorch Tensors、The Fundamentals of Autograd、Building Models with PyTorch、Training with PyTorch
+- [PyTorch 官方 Learn the Basics 中文入口](https://docs.pytorch.ac.cn/tutorials/beginner/basics/intro.html)，分步骤链接见详细计划
+- PyTorch 官方 YouTube Series 仅作可选英文术语对照，不要求和中文材料重复完整学习
 - 第一轮跳过 TensorBoard、Captum、分布式、编译、性能优化
 
 书籍章节：
 
 - 《动手学深度学习 / Dive into Deep Learning》
 - Ch.2: 2.1 Data Manipulation、2.3 Linear Algebra、2.5 Automatic Differentiation
-- Ch.3: Linear Neural Networks for Regression
-- Ch.4: Linear Neural Networks for Classification
+- 中文版 Ch.3：线性神经网络；3.1–3.3 对应线性回归，3.4–3.7 对应分类基础
+- 中文版 Ch.4：多层感知机；4.1–4.4 核心研读，4.5–4.9 结合项目覆盖基础概念，4.10 案例按需参考，不新增竞赛项目门槛
+- [中文版目录](https://zh.d2l.ai/)：选择 PyTorch 代码标签，不混用英文新版章节编号
+- D2L 5.1/5.2/5.5 等是按需参考，不是额外必读门槛
 
 视频：
 
@@ -32,20 +48,23 @@ PyTorch 入门前置：
 - P13-P16: 线性回归和实现
 - P17-P21: Softmax / Loss / Classification
 - P24-P26: Perceptron / MLP
-- PyTorch Learn the Basics / PyTorch official YouTube Series
+- 上述 P 编号采用所用合集的分集口径；原作者合并发布的视频按标题/分集名定位，链接见详细计划，不混用两套编号
 
 任务：
 
 - Tensor 小实验
 - Autograd 小实验
 - 从零实现 Linear Regression
-- MLP/FashionMNIST 或 CIFAR 分类
-- 保存和加载模型
+- MLP/Fashion-MNIST 分类，包含训练与验证/测试评估；CNN/ResNet 属于 Phase 1A
+- 保存、重新加载模型并进行 inference
+- 一次受控变量实验与至少一份简短实验记录
+- 已验收的 Notebook 可作为产物，不为匹配旧 `.py` 文件名重写
 
 通过标准：
 
 - 能不看教程写出 `zero_grad -> forward -> loss -> backward -> step`
 - 能解释 training / validation / inference 的区别
+- 展示实际运行结果并完成实验记录核查；只有达到 Gate 才进入 Phase 1A
 
 ## Phase 1A: CNN 与视觉表示
 

@@ -20,6 +20,12 @@ Current objective:
 - implement small experiments instead of only reading tutorials
 - clearly distinguish training, validation, and inference
 
+As of 2026-10-18, this repository contains Tensor, Dataset/DataLoader, minimum-math, and Autograd learning exercises. Phase 0 remains in progress.
+
+Remaining sequence: **linear regression -> MLP classification -> save/load/inference -> final gate**. Model construction, loss, and optimization are learned within these projects. The next milestone is linear regression.
+
+See the [roadmap](ROADMAP.md) for the public learning route and the [Phase 0 execution plan](00_notes/phase_0_plan.md) for current materials, tasks, and completion criteria.
+
 ## Repository Map
 
 - `00_notes/` - planning notes and research questions
@@ -33,8 +39,6 @@ Current objective:
 - `08_vla/` - vision-language-action and generalist policy work
 - `09_research_rotations/` - focused mini research directions
 - `reports/` - experiment report templates and writeups
-
-See [ROADMAP.md](ROADMAP.md) for the full learning route.
 
 ## Working Style
 
